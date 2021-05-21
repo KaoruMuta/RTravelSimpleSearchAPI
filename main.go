@@ -28,6 +28,7 @@ func main() {
 	params.Set("smallClassCode", "tokyo")
 	params.Set("detailClassCode", "A")
 
+	request.URL.RawQuery = params.Encode()
 	client := &http.Client{}
 	response, err := client.Do(request)
 	if err != nil {
@@ -39,6 +40,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-
-	fmt.Println(body)
+	fmt.Println(string(body))
 }
