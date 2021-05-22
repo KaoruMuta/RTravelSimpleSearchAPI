@@ -26,10 +26,6 @@ type PagingInfo struct {
 type Hotel struct {
 	HotelBasicInfo HotelBasicInfo `json:"hotelBasicInfo"`
 	HotelRatingInfo HotelRatingInfo `json:"hotelRatingInfo"`
-	HotelDetailInfo HotelDetailInfo `json:"hotelDetailInfo"`
-	HotelFacilitiesInfo HotelFacilitiesInfo `json:"hotelFacilitiesInfo"`
-	HotelPolicyInfo HotelPolicyInfo `json:"hotelPolicyInfo"`
-	HotelOtherInfo HotelOtherInfo `json:"hotelOtherInfo"`
 }
 
 type HotelBasicInfo struct {
@@ -38,22 +34,6 @@ type HotelBasicInfo struct {
 
 type HotelRatingInfo struct {
 	ServiceAverage float32 `json:"serviceAverage"`
-}
-
-type HotelDetailInfo struct {
-	ReserveTelephoneNo string `json:"reserveTelephoneNo"`
-}
-
-type HotelFacilitiesInfo struct {
-	HotelRoomNum int `json:"hotelRoomNum"`
-}
-
-type HotelPolicyInfo struct {
-	Note string `json:"note"`
-}
-
-type HotelOtherInfo struct {
-	Privilege string `json:"privilege"`
 }
 
 func main() {
